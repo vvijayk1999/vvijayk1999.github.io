@@ -309,6 +309,33 @@
 
         document.querySelector(".light").style.background = radialGradientValue;
       });
+
+      // Function to handle scroll events
+      function handleScroll() {
+        // Check each section and add 'active' class to the corresponding link
+        document.querySelectorAll(".section").forEach(function (section) {
+          var sectionId = section.id;
+          var link = document.querySelector(`a[href="#${sectionId}"]`);
+
+          if (isInViewport(section)) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      }
+
+      function isInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        var windowHeight =
+          window.innerHeight || document.documentElement.clientHeight;
+
+        // Check if more than 50% of the section is visible vertically
+        return rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2;
+      }
+
+      // Attach event listeners
+      window.addEventListener("scroll", handleScroll);
     </script>
   </body>
 </html>
