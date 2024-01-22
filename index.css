@@ -220,3 +220,32 @@ nav ul a:hover::after,
 .header-section .social-links img:hover {
   opacity: 100%;
 }
+
+/* Main Section */
+.main-section {
+  flex: 55%;
+  /* border: solid white 1px; */
+}
+
+.section .subheading {
+  padding: var(--size-m) 0 var(--size-m) 0;
+  font-size: 35px;
+  text-align: center;
+  color: var(--text-white-1);
+}
+
+/* About Section */
+.about-section {
+  font-size: var(--font-content);
+  padding-top: var(--size-xl);
+  padding-left: calc(var(--size-m) * 2);
+}
+
+.about-section .subheading {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.about-section p {
+  margin: 0 0 var(--size-s) 0;
+}
