@@ -340,3 +340,41 @@ nav ul a:hover::after,
 .project-card .project-desc {
   margin: var(--size-s) 0;
 }
+
+/* SKILLS SECTION */
+.skills-section {
+  margin-bottom: calc(var(--size-xl) * 3);
+}
+.skills-section .skills-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(86px, 1fr));
+  gap: 10px;
+}
+
+.skills-section .skills-list .skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: var(--all-transition);
+  opacity: 80%;
+}
+
+.skills-section .skills-list .skill:hover {
+  opacity: 100;
+  transform: scale(1.15);
+}
+
+.skills-section .skills-list .skill img {
+  width: 56px;
+  height: 56px;
+}
+
+.skills-section .skills-list .skill p {
+  padding-top: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--text-white-1);
+}
