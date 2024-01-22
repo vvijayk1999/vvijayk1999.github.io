@@ -299,3 +299,44 @@ nav ul a:hover::after,
 .experience-card .experience-desc {
   margin: var(--size-m) 0;
 }
+
+/* PROJECTS SECTION */
+.projects-section .project-card {
+  padding: var(--size-m);
+  border-radius: 10px;
+  margin-bottom: var(--size-l);
+  transition: var(--all-transition);
+}
+.projects-section .project-card:hover {
+  background-color: var(--text-white-3);
+}
+.project-card .project-title-card {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 var(--size-s) 0;
+}
+
+.project-title-card .project-title {
+  font-size: 20px;
+  color: var(--text-white-1);
+}
+
+.project-title-card .github {
+  display: flex;
+  align-items: center;
+}
+
+.project-title-card .github img {
+  width: 25px;
+  height: 25px;
+  margin: 0 0 0 12px;
+}
+
+.projects-section .project-card > img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.project-card .project-desc {
+  margin: var(--size-s) 0;
+}
