@@ -378,3 +378,126 @@ nav ul a:hover::after,
   text-align: center;
   color: var(--text-white-1);
 }
+
+/* RESPONSIVE DESIGN */
+
+/* iPads (portrait and landscape)  */
+@media only screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    margin-top: var(--size-l);
+  }
+
+  .header-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: unset;
+    padding: var(--size-s) 0;
+    height: unset;
+  }
+
+  .header-section .social-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .header-section .summary {
+    padding: 0px;
+    width: 100%;
+  }
+  nav {
+    display: none;
+  }
+
+  .section {
+    padding-bottom: var(--size-l);
+  }
+
+  .about-section {
+    padding-left: 0px;
+    margin-top: var(--size-m);
+  }
+
+  .section .subheading {
+    font-size: 30px;
+    text-align: left;
+  }
+
+  .experience-section,
+  .projects-section,
+  .skills-section {
+    padding-left: 0px;
+  }
+
+  .experience-section .left-col,
+  .experience-section .right-col {
+    width: 100%;
+  }
+
+  .experience-section .experience-card {
+    flex-direction: column;
+    position: relative;
+    padding: 0px;
+  }
+
+  .experience-section .experience-card:hover,
+  .projects-section .project-card:hover {
+    background-color: transparent;
+  }
+
+  .experience-card h3 {
+    padding-bottom: var(--size-l);
+  }
+
+  .projects-section .project-card {
+    padding: 0px;
+    margin-bottom: var(--size-xl);
+  }
+
+  .experience-section .left-col p {
+    position: absolute;
+    top: 24px;
+    left: clac(var(--size-m) - 12px);
+  }
+
+  #skills #skills-subheading {
+    text-align: center;
+  }
+}
+
+/* Smartphones and mobile devices */
+@media only screen and (max-width: 620px) {
+  .container {
+    width: 90%;
+  }
+  .section {
+    padding-left: 0px;
+  }
+  .about-section {
+    padding-top: 0px;
+  }
+  h1 {
+    font-size: 38px;
+  }
+  .header-section {
+    flex-direction: column;
+  }
+  .header-section .social-links {
+    flex-direction: row;
+    justify-content: end;
+    padding-top: var(--size-xl);
+  }
+  .header-section .subtitle {
+    font-size: 16px;
+    padding: 0;
+  }
+  .header-section .summary {
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .section .subheading {
+    font-size: 25px;
+  }
+}
