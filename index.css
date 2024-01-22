@@ -107,3 +107,116 @@ body {
   flex-direction: row;
   max-width: 1100px;
 }
+
+/* Header Section */
+.section {
+  padding: var(--size-m) 0 calc(var(--size-xl) * 1.4) var(--size-m);
+}
+.header-section {
+  box-sizing: border-box;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  padding: calc(var(--size-xl) * 1.4) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 45%;
+}
+
+.header-section h1 {
+  color: var(--text-white-1);
+}
+
+.header-section .subtitle {
+  font-family: "sans-serif-2-bold";
+  font-size: var(--font-sub-head);
+  padding: 8px 0 0 0;
+  color: var(--text-white-1);
+}
+
+.header-section .summary {
+  font-family: "sans-serif-1-light";
+  font-size: 16px;
+  padding: calc(var(--size-l) / 2) 0 0 0;
+  display: inline-block;
+  width: 80%;
+  line-height: 24px;
+}
+
+nav {
+  padding: 0 0 0 50px;
+}
+
+nav ul {
+  font-size: var(--font-nav);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul a {
+  display: inline-block;
+  padding: 10px 0;
+  position: relative;
+  color: var(--text-white-2);
+  position: relative;
+  transition: var(--nav-transition);
+}
+
+/* Designing and Animating Navbar */
+nav ul a:hover,
+.active {
+  color: var(--text-white-1);
+  transform: translateX(65px);
+}
+
+nav ul a::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translateX(-50px);
+  width: 50px;
+  height: 100%;
+  transform-origin: left;
+  transition: var(--nav-transition);
+}
+
+nav ul a:hover::before,
+.active::before {
+  transform: scaleX(2.3) translateX(-50px);
+}
+
+nav ul a::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(-50px, 23px);
+  width: 30px;
+  height: 2px;
+  border-radius: 4px;
+  background-color: var(--text-white-2);
+  transform-origin: left;
+  transition: var(--nav-transition);
+}
+
+nav ul a:hover::after,
+.active::after {
+  transform: scaleX(3.2) translate(-36px, 23px);
+  background-color: var(--text-white-1);
+}
+
+.header-section .social-links img {
+  opacity: 70%;
+  margin-right: 16px;
+  width: 28px;
+  height: 28px;
+}
+
+.header-section .social-links img:hover {
+  opacity: 100%;
+}
