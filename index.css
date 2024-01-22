@@ -45,6 +45,18 @@ a:active {
   color: inherit;
 }
 
+/* text selection color */
+::-moz-selection {
+  /* for Firefox */
+  color: #134e4a;
+  background: #5eead4;
+}
+
+::selection {
+  color: #134e4a;
+  background: #5eead4;
+}
+
 p,
 h1,
 h2,
