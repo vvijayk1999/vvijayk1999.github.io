@@ -249,3 +249,43 @@ nav ul a:hover::after,
 .about-section p {
   margin: 0 0 var(--size-s) 0;
 }
+
+/* experience Section */
+.experience-section {
+  font-size: var(--font-content);
+}
+.experience-section .left-col {
+  width: 30%;
+}
+.experience-section .right-col {
+  width: 70%;
+}
+.experience-section .experience-card {
+  padding: var(--size-m);
+  margin-bottom: var(--size-l);
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  transition: var(--all-transition);
+}
+
+.experience-section .experience-card:hover {
+  background-color: var(--text-white-3);
+}
+
+.experience-card .left-col p {
+  font-size: 13px;
+}
+
+.experience-card h3 {
+  font-size: 20px;
+  color: var(--text-white-1);
+}
+
+.experience-card .role-title {
+  font-size: 18px;
+}
+
+.experience-card .experience-desc {
+  margin: var(--size-m) 0;
+}
