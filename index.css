@@ -101,6 +101,16 @@ body {
   box-sizing: border-box;
 }
 
+.btn {
+  font-size: var(--font-size-btn);
+  color: var(--primary-accent);
+  background-color: var(--dark-accent);
+  border: 0;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin: 6px 3px 0 0;
+}
+
 .container {
   width: 80%;
   display: flex;
