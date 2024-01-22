@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <div class="light"></div>
     <div class="container">
       <div class="header-section">
         <!-- Header Section -->
@@ -290,5 +291,24 @@
         </div>
       </main>
     </div>
+    <script>
+      // Function to handle mousemove and change light glow effect
+      document.addEventListener("mousemove", function (event) {
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
+
+        var mouseXpercentage = Math.round((event.clientX / windowWidth) * 100);
+        var mouseYpercentage = Math.round((event.clientY / windowHeight) * 100);
+
+        var radialGradientValue =
+          "radial-gradient( 500px at " +
+          mouseXpercentage +
+          "% " +
+          mouseYpercentage +
+          "%, var(--light-effect), rgba(0,0,0,0%))";
+
+        document.querySelector(".light").style.background = radialGradientValue;
+      });
+    </script>
   </body>
 </html>
