@@ -1,3 +1,28 @@
+:root {
+  --main-bg-color: #0f172a;
+  --primary-accent: rgba(113, 255, 238, 0.75);
+  --dark-accent: rgba(74, 185, 172, 0.199);
+  --light-effect: rgba(0, 81, 255, 0.151);
+
+  --text-white: #fff;
+  --text-white-1: rgba(255, 255, 255, 0.85);
+  --text-white-2: rgba(255, 255, 255, 56%);
+  --text-white-3: rgba(255, 255, 255, 5%);
+
+  --font-nav: 15px;
+  --font-sub-head: 18px;
+  --font-content: 16px;
+  --font-size-btn: 14px;
+
+  --size-s: 18px;
+  --size-m: 24px;
+  --size-l: 32px;
+  --size-xl: 64px;
+
+  --nav-transition: all 0.2s linear;
+  --all-transition: all 0.1s linear;
+}
+
 @font-face {
   font-family: "sans-serif-1-bold";
   src: url("assets/fonts/2.woff2");
@@ -9,4 +34,76 @@
 @font-face {
   font-family: "sans-serif-1-light";
   src: url("assets/fonts/8.woff2");
+}
+
+/* Style Fixes */
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  font-family: "sans-serif-1-bold";
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+/* default stylings */
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  font-family: "sans-serif-1-light";
+  font-size: 16px;
+  line-height: 19px;
+}
+
+a {
+  color: var(--text-white);
+}
+
+a:hover {
+  color: var(--primary-accent);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--text-white-2);
+}
+
+.light {
+  position: fixed;
+  z-index: -10;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  max-width: 1100px;
 }
